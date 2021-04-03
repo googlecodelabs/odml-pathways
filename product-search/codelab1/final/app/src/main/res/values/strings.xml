@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Product Image Search</string>
+    <string name="take_photo_description">Select a preset image or take a new photo</string>
+    <string name="gallery_button_text">Gallery</string>
+    <string name="take_photo_button_text">Take Photo</string>
+    <string name="camera_app_not_found">No Camera app found!</string>
+    <string name="button_search_product">Search</string>
+</resources>

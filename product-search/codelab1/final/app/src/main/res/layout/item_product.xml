@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/item_product_height"
+    android:padding="@dimen/item_product_padding">
+
+    <ImageView
+        android:id="@+id/ivProduct"
+        android:layout_width="@dimen/image_product_size"
+        android:layout_height="@dimen/image_product_size"
+        android:contentDescription="@null"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/text_product_margin"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivProduct"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvProductName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            tools:text="Product Id" />
+
+        <TextView
+            android:id="@+id/tvProductScore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Product Name" />
+
+        <TextView
+            android:id="@+id/tvProductLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Product Score" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
