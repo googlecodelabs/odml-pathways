@@ -122,22 +122,16 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         // Step 2: Initialize the detector object
         val options = ObjectDetector.ObjectDetectorOptions.builder()
                 .setMaxResults(5)
-                .setScoreThreshold(0.5f)
+                .setScoreThreshold(0.3f)
                 .build()
         val detector = ObjectDetector.createFromFileAndOptions(
                 this,
-//                "efficientdet_lite3.tflite",
-//                "salad1_automl.tflite",
-                "salad2_automl.tflite",
-//            "centernet.tflite",
-//                "salad3_mm.tflite",
+                "salad.tflite",
                 options
         )
 
         // Step 3: Feed given image to the detector
         val results = detector.detect(image)
-
-        debugPrint(results)
 
         // Step 4: Parse the detection result and show it
         val resultToDisplay = results.map {
@@ -159,20 +153,17 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
      * debugPrint(visionObjects: List<Detection>)
      *      Print the detection result to logcat to examine
      */
-    private fun debugPrint(visionObjects: List<Detection>) {
-        for ((idx, obj) in visionObjects.withIndex()) {
+    private fun debugPrint(results : List<Detection>) {
+        for ((i, obj) in results.withIndex()) {
             val box = obj.boundingBox
 
-            Log.d(TAG, "Detected object: $idx ")
-            Log.d(
-                    TAG,
-                    "  boundingBox: (${box.left}, ${box.top}) - (${box.right},${box.bottom})"
-            )
+            Log.d(TAG, "Detected object: ${i} ")
+            Log.d(TAG, "  boundingBox: (${box.left}, ${box.top}) - (${box.right},${box.bottom})")
 
-            for (label in obj.categories) {
-                Log.d(TAG, "    Label displayName: ${label.displayName}")
-                Log.d(TAG, "    Label text: ${label.label}")
-                Log.d(TAG, "    Label score: ${label.score}")
+            for ((j, category) in obj.categories.withIndex()) {
+                Log.d(TAG, "    Label $j: ${category.label}")
+                val confidence: Int = category.score.times(100).toInt()
+                Log.d(TAG, "    Confidence: ${confidence}%")
             }
         }
     }
@@ -189,7 +180,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         // Run ODT and display result
         // Note that we run this in the background thread to avoid blocking the app UI because
         // TFLite object detection is a synchronised process.
-        lifecycleScope.launch(Dispatchers.IO) { runObjectDetection(bitmap) }
+        lifecycleScope.launch(Dispatchers.Default) { runObjectDetection(bitmap) }
     }
 
     /**
