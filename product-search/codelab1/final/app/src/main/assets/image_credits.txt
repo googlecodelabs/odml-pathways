@@ -1,3 +1,0 @@
-Preset1.jpg: https://pixabay.com/photos/catwalk-models-women-fashion-1840941/
-Preset2.jpg: https://pixabay.com/photos/girl-model-dress-fashion-2417576/
-Preset3.jpg: https://pixabay.com/photos/fashion-show-fashion-catwalk-model-1746582/

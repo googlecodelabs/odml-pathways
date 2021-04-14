@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/ivGalleryApp"
+        android:layout_width="@dimen/object_detector_button_width"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/object_detector_view_margin"
+        android:background="@color/purple_500"
+        android:drawableStart="@drawable/ic_gallery"
+        android:paddingStart="@dimen/object_detector_button_padding"
+        android:paddingEnd="@dimen/object_detector_button_padding"
+        android:text="@string/gallery_button_text"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ivCapture"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/ivCapture"
+        android:layout_width="@dimen/object_detector_button_width"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/object_detector_view_margin"
+        android:background="@color/purple_500"
+        android:drawableStart="@drawable/ic_shutter"
+        android:paddingStart="@dimen/object_detector_button_padding"
+        android:paddingEnd="@dimen/object_detector_button_padding"
+        android:text="@string/take_photo_button_text"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivGalleryApp"
+        app:layout_constraintTop_toTopOf="@+id/ivGalleryApp" />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/object_detector_view_margin"
+        android:layout_marginBottom="@dimen/object_detector_view_margin"
+        android:gravity="center"
+        android:text="@string/take_photo_description"
+        android:textSize="@dimen/object_detector_text_size"
+        app:layout_constraintBottom_toTopOf="@id/ivPreset2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivPreview" />
+
+    <ImageView
+        android:id="@+id/ivPreset1"
+        style="@style/DefaultImage"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/ivPreset2"
+        app:layout_constraintEnd_toStartOf="@+id/ivPreset2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivPreset2" />
+
+    <ImageView
+        android:id="@+id/ivPreset2"
+        style="@style/DefaultImage"
+        android:layout_marginBottom="@dimen/object_detector_view_margin"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toTopOf="@+id/ivCapture"
+        app:layout_constraintEnd_toStartOf="@id/ivPreset3"
+        app:layout_constraintStart_toEndOf="@id/ivPreset1" />
+
+    <ImageView
+        android:id="@+id/ivPreset3"
+        style="@style/DefaultImage"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/ivPreset2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivPreset2"
+        app:layout_constraintTop_toTopOf="@+id/ivPreset2" />
+
+    <com.google.codelabs.productimagesearch.ImageClickableView
+        android:id="@+id/ivPreview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@null"
+        android:focusableInTouchMode="true"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@id/tvDescription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
