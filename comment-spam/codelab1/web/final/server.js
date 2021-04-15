@@ -23,7 +23,7 @@ const server = http.createServer(app);
 // Require socket.io and then make it use the http server above.
 // This allows us to expose correct socket.io library JS for use
 // in our client side JS.
-var io = require('socket.io').listen(server);
+var io = require('socket.io')(server);
 
 // Serve all the files in 'www'.
 app.use(express.static("www"));
