@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My Pretend Video Blog</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+  </head>  
+  <body>
+    <header>
+      <h1>MooTube</h1>
+      <a id="login" href="#">Login</a>
+    </header>
+    
+    <h2>Check out the TensorFlow.js rap for our show and tell!</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ipsum quam, tincidunt et tempor in, pulvinar vel urna. Nunc eget erat pulvinar, lacinia nisl in, rhoncus est. Morbi molestie vestibulum nunc. Integer non ipsum dolor. Curabitur condimentum sem eget odio dapibus, nec bibendum augue ultricies. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed iaculis ut ligula sed tempor. Phasellus ac dictum felis. Integer arcu dui, facilisis sit amet placerat sagittis, blandit sit amet risus.</p>
+    
+    <iframe width="100%" height="500" src="https://www.youtube.com/embed/RhVs7ijB17c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <section id="comments" class="comments">
+      <div id="comment" class="comment" contenteditable></div>
+      <button id="post" type="button">Comment</button>
+
+      <ul id="commentsList">
+        <li>
+          <span class="username">NotASpammer</span>
+          <span class="timestamp">3/18/2021, 6:52:16 PM</span> 
+          <p>I am not a spammer, I am a good boy.</p>
+        </li>
+        <li>
+          <span class="username">SomeUser</span>
+          <span class="timestamp">2/11/2021, 3:10:00 PM</span>
+          <p>Wow, I love this video, so many amazing demos!</p>
+        </li>
+      </ul>
+    </section>
+    
+
+    <!-- Import TensorFlow.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js" type="text/javascript"></script>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    
+    <!-- Import the page's JavaScript to do some stuff -->
+    <script type="module" src="/script.js"></script>
+  </body>
+</html>
