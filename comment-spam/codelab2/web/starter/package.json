@@ -1,0 +1,16 @@
+{
+  "name": "tfjs-with-backend",
+  "version": "0.0.1",
+  "description": "A TFJS front end with thin Node.js backend",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^4.0.1"
+  },
+  "engines": {
+    "node": "12.x"
+  }
+}
