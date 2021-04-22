@@ -1,0 +1,3 @@
+Preset1.jpg: https://pixabay.com/photos/red-bicycle-woman-red-dress-summer-3498602/
+Preset2.jpg: https://pixabay.com/photos/girl-model-dress-fashion-2417576/
+Preset3.jpg: https://pixabay.com/photos/boots-shoes-moss-hiking-shoes-worn-1638873/

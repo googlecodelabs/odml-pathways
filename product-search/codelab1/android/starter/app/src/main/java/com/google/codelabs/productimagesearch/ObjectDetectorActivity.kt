@@ -30,13 +30,8 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.FileProvider
 import com.google.codelabs.productimagesearch.databinding.ActivityObjectDetectorBinding
-import com.google.mlkit.vision.common.InputImage
 import com.google.mlkit.vision.objects.DetectedObject
-import com.google.mlkit.vision.objects.ObjectDetection
-import com.google.mlkit.vision.objects.defaults.ObjectDetectorOptions
-import com.google.mlkit.vision.objects.defaults.PredefinedCategory
 import java.io.File
-import java.io.FileOutputStream
 import java.io.IOException
 
 
@@ -87,41 +82,9 @@ class ObjectDetectorActivity : AppCompatActivity() {
             ivPreset1.setOnClickListener { setViewAndDetect(getBitmapFromAsset(IMAGE_PRESET_1)) }
             ivPreset2.setOnClickListener { setViewAndDetect(getBitmapFromAsset(IMAGE_PRESET_2)) }
             ivPreset3.setOnClickListener { setViewAndDetect(getBitmapFromAsset(IMAGE_PRESET_3)) }
-            // Callback received when the user taps on any of the detected objects.
-            ivPreview.setOnObjectClickListener { objectImage ->
-                startProductImageSearch(objectImage)
-            }
+
             // Default display
             setViewAndDetect(getBitmapFromAsset(IMAGE_PRESET_2))
-        }
-    }
-
-    /**
-     * Start the product image search activity
-     */
-    private fun startProductImageSearch(objectImage: Bitmap) {
-        try {
-            // Create file based Bitmap. We use PNG to preserve the image quality
-            val savedFile = createImageFile(ProductSearchActivity.CROPPED_IMAGE_FILE_NAME)
-            objectImage.compress(Bitmap.CompressFormat.PNG, 100, FileOutputStream(savedFile))
-
-            // Start the product search activity (using Vision Product Search API.).
-            startActivity(
-                Intent(
-                    this,
-                    ProductSearchActivity::class.java
-                ).apply {
-                    // As the size limit of a bundle is 1MB, we need to save the bitmap to a file
-                    // and reload it in the other activity to support large query images.
-                    putExtra(
-                        ProductSearchActivity.REQUEST_TARGET_IMAGE_PATH,
-                        savedFile.absolutePath
-                    )
-                })
-        } catch (e: Exception) {
-            // IO Exception, Out Of memory ....
-            Toast.makeText(this, e.message, Toast.LENGTH_SHORT).show()
-            Log.e(TAG, "Error starting the product image search activity.", e)
         }
     }
 
@@ -145,35 +108,6 @@ class ObjectDetectorActivity : AppCompatActivity() {
      * Detect Objects in a given Bitmap
      */
     private fun runObjectDetection(bitmap: Bitmap) {
-        // Step 1: create ML Kit's InputImage object
-        val image = InputImage.fromBitmap(bitmap, 0)
-
-        // Step 2: acquire detector object
-        val options = ObjectDetectorOptions.Builder()
-            .setDetectorMode(ObjectDetectorOptions.SINGLE_IMAGE_MODE)
-            .enableMultipleObjects()
-            .enableClassification()
-            .build()
-        val objectDetector = ObjectDetection.getClient(options)
-
-        // Step 3: feed given image to detector and setup callback
-        objectDetector.process(image)
-            .addOnSuccessListener { results ->
-                // Keep only the FASHION_GOOD objects
-                val filteredResults = results.filter { result ->
-                    result.labels.indexOfFirst { it.text == PredefinedCategory.FASHION_GOOD } != -1
-                }
-
-                // Visualize the detection result
-                runOnUiThread {
-                    viewBinding.ivPreview.drawDetectionResults(filteredResults)
-                }
-
-            }
-            .addOnFailureListener {
-                // Task failed with an exception
-                Log.e(TAG, it.message.toString())
-            }
 
     }
 

@@ -87,41 +87,9 @@ class ObjectDetectorActivity : AppCompatActivity() {
             ivPreset1.setOnClickListener { setViewAndDetect(getBitmapFromAsset(IMAGE_PRESET_1)) }
             ivPreset2.setOnClickListener { setViewAndDetect(getBitmapFromAsset(IMAGE_PRESET_2)) }
             ivPreset3.setOnClickListener { setViewAndDetect(getBitmapFromAsset(IMAGE_PRESET_3)) }
-            // Callback received when the user taps on any of the detected objects.
-            ivPreview.setOnObjectClickListener { objectImage ->
-                startProductImageSearch(objectImage)
-            }
+
             // Default display
             setViewAndDetect(getBitmapFromAsset(IMAGE_PRESET_2))
-        }
-    }
-
-    /**
-     * Start the product image search activity
-     */
-    private fun startProductImageSearch(objectImage: Bitmap) {
-        try {
-            // Create file based Bitmap. We use PNG to preserve the image quality
-            val savedFile = createImageFile(ProductSearchActivity.CROPPED_IMAGE_FILE_NAME)
-            objectImage.compress(Bitmap.CompressFormat.PNG, 100, FileOutputStream(savedFile))
-
-            // Start the product search activity (using Vision Product Search API.).
-            startActivity(
-                Intent(
-                    this,
-                    ProductSearchActivity::class.java
-                ).apply {
-                    // As the size limit of a bundle is 1MB, we need to save the bitmap to a file
-                    // and reload it in the other activity to support large query images.
-                    putExtra(
-                        ProductSearchActivity.REQUEST_TARGET_IMAGE_PATH,
-                        savedFile.absolutePath
-                    )
-                })
-        } catch (e: Exception) {
-            // IO Exception, Out Of memory ....
-            Toast.makeText(this, e.message, Toast.LENGTH_SHORT).show()
-            Log.e(TAG, "Error starting the product image search activity.", e)
         }
     }
 
@@ -132,7 +100,7 @@ class ObjectDetectorActivity : AppCompatActivity() {
         bitmap?.let {
             // Clear the dots indicating the previous detection result
             viewBinding.ivPreview.drawDetectionResults(emptyList())
-
+            
             // Display the input image on the screen.
             viewBinding.ivPreview.setImageBitmap(bitmap)
 

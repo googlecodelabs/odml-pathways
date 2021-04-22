@@ -100,29 +100,7 @@ class ObjectDetectorActivity : AppCompatActivity() {
      * Start the product image search activity
      */
     private fun startProductImageSearch(objectImage: Bitmap) {
-        try {
-            // Create file based Bitmap. We use PNG to preserve the image quality
-            val savedFile = createImageFile(ProductSearchActivity.CROPPED_IMAGE_FILE_NAME)
-            objectImage.compress(Bitmap.CompressFormat.PNG, 100, FileOutputStream(savedFile))
 
-            // Start the product search activity (using Vision Product Search API.).
-            startActivity(
-                Intent(
-                    this,
-                    ProductSearchActivity::class.java
-                ).apply {
-                    // As the size limit of a bundle is 1MB, we need to save the bitmap to a file
-                    // and reload it in the other activity to support large query images.
-                    putExtra(
-                        ProductSearchActivity.REQUEST_TARGET_IMAGE_PATH,
-                        savedFile.absolutePath
-                    )
-                })
-        } catch (e: Exception) {
-            // IO Exception, Out Of memory ....
-            Toast.makeText(this, e.message, Toast.LENGTH_SHORT).show()
-            Log.e(TAG, "Error starting the product image search activity.", e)
-        }
     }
 
     /**
@@ -130,6 +108,9 @@ class ObjectDetectorActivity : AppCompatActivity() {
      */
     private fun setViewAndDetect(bitmap: Bitmap?) {
         bitmap?.let {
+            // Clear the dots indicating the previous detection result
+            viewBinding.ivPreview.drawDetectionResults(emptyList())
+
             // Display the input image on the screen.
             viewBinding.ivPreview.setImageBitmap(bitmap)
 
@@ -156,6 +137,8 @@ class ObjectDetectorActivity : AppCompatActivity() {
         // Step 3: feed given image to detector and setup callback
         objectDetector.process(image)
             .addOnSuccessListener { results ->
+                debugPrint(results)
+
                 // Keep only the FASHION_GOOD objects
                 val filteredResults = results.filter { result ->
                     result.labels.indexOfFirst { it.text == PredefinedCategory.FASHION_GOOD } != -1

@@ -90,12 +90,7 @@ class ProductSearchActivity : AppCompatActivity() {
      * Use Product Search API to search with the given query image
      */
     private fun searchByImage(queryImage: Bitmap) {
-        apiClient.annotateImage(queryImage)
-            .addOnSuccessListener { showSearchResult(it) }
-            .addOnFailureListener { error ->
-                Log.e(TAG, "Error calling Vision API Product Search.", error)
-                showErrorResponse(error.localizedMessage)
-            }
+
     }
 
     /**
