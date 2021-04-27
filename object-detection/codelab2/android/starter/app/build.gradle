@@ -43,4 +43,5 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.0'
     implementation 'androidx.exifinterface:exifinterface:1.3.2'
 
+    //TODO: Add TFLite Task Library here
 }

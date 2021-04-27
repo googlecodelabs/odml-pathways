@@ -113,7 +113,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
      *      TFLite Object Detection function
      */
     private fun runObjectDetection(bitmap: Bitmap) {
-
+        //TODO: Add object detection code here
     }
 
     /**

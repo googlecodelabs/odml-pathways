@@ -254,7 +254,7 @@ class ObjectDetectorActivity : AppCompatActivity() {
      * SuppressWarnings => we have covered this warning.
      */
     private fun getBitmapFromUri(imageUri: Uri): Bitmap? {
-        return try {
+        val bitmap = try {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
                 ImageDecoder.decodeBitmap(ImageDecoder.createSource(contentResolver, imageUri))
             } else {
@@ -266,6 +266,9 @@ class ObjectDetectorActivity : AppCompatActivity() {
         } catch (ex: IOException) {
             null
         }
+        
+        // Make a copy of the bitmap in a desirable format
+        return bitmap?.copy(Bitmap.Config.ARGB_8888, false)
     }
 
     /**
