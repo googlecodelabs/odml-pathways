@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: :task-library-audio:@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1e56e1dd5c6f0ef9c94928c342883d99/jetified-task-library-audio/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1e56e1dd5c6f0ef9c94928c342883d99/jetified-task-library-audio/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1e56e1dd5c6f0ef9c94928c342883d99/jetified-task-library-audio/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
