@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01094EB12614E274009724EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01094EB02614E274009724EB /* AppDelegate.swift */; };
+		01094EB32614E274009724EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01094EB22614E274009724EB /* SceneDelegate.swift */; };
+		01094EB52614E274009724EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01094EB42614E274009724EB /* ViewController.swift */; };
+		01094EB82614E274009724EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01094EB62614E274009724EB /* Main.storyboard */; };
+		01094EBA2614E275009724EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01094EB92614E275009724EB /* Assets.xcassets */; };
+		01094EBD2614E275009724EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01094EBB2614E275009724EB /* LaunchScreen.storyboard */; };
+		0123B17B2614F00800F77B14 /* flower1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0123B17A2614F00800F77B14 /* flower1.jpg */; };
+		32A7EC4134FB3BAA29890EC4 /* libPods-ImageClassifierStep1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0154680FD08E5757E0B2C0B4 /* libPods-ImageClassifierStep1.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		01094EAD2614E274009724EB /* ImageClassifierStep1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageClassifierStep1.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		01094EB02614E274009724EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		01094EB22614E274009724EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		01094EB42614E274009724EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		01094EB72614E274009724EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		01094EB92614E275009724EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		01094EBC2614E275009724EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		01094EBE2614E275009724EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0123B17A2614F00800F77B14 /* flower1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = flower1.jpg; sourceTree = "<group>"; };
+		0154680FD08E5757E0B2C0B4 /* libPods-ImageClassifierStep1.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ImageClassifierStep1.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A846D6FDBFFAEFA59E7BCAB5 /* Pods-ImageClassifierStep1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageClassifierStep1.debug.xcconfig"; path = "Target Support Files/Pods-ImageClassifierStep1/Pods-ImageClassifierStep1.debug.xcconfig"; sourceTree = "<group>"; };
+		B5FDF199C19C3DA04BA449DB /* Pods-ImageClassifierStep1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageClassifierStep1.release.xcconfig"; path = "Target Support Files/Pods-ImageClassifierStep1/Pods-ImageClassifierStep1.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		01094EAA2614E274009724EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32A7EC4134FB3BAA29890EC4 /* libPods-ImageClassifierStep1.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		01094EA42614E274009724EB = {
+			isa = PBXGroup;
+			children = (
+				01094EAF2614E274009724EB /* ImageClassifierStep1 */,
+				01094EAE2614E274009724EB /* Products */,
+				E57DE543228106D949F13FE8 /* Pods */,
+				FDEB4744C35AFC6D64A223D5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		01094EAE2614E274009724EB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				01094EAD2614E274009724EB /* ImageClassifierStep1.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		01094EAF2614E274009724EB /* ImageClassifierStep1 */ = {
+			isa = PBXGroup;
+			children = (
+				01094EB02614E274009724EB /* AppDelegate.swift */,
+				01094EB22614E274009724EB /* SceneDelegate.swift */,
+				01094EB42614E274009724EB /* ViewController.swift */,
+				01094EB62614E274009724EB /* Main.storyboard */,
+				01094EB92614E275009724EB /* Assets.xcassets */,
+				0123B17A2614F00800F77B14 /* flower1.jpg */,
+				01094EBB2614E275009724EB /* LaunchScreen.storyboard */,
+				01094EBE2614E275009724EB /* Info.plist */,
+			);
+			path = ImageClassifierStep1;
+			sourceTree = "<group>";
+		};
+		E57DE543228106D949F13FE8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A846D6FDBFFAEFA59E7BCAB5 /* Pods-ImageClassifierStep1.debug.xcconfig */,
+				B5FDF199C19C3DA04BA449DB /* Pods-ImageClassifierStep1.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FDEB4744C35AFC6D64A223D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0154680FD08E5757E0B2C0B4 /* libPods-ImageClassifierStep1.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		01094EAC2614E274009724EB /* ImageClassifierStep1 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01094EC12614E275009724EB /* Build configuration list for PBXNativeTarget "ImageClassifierStep1" */;
+			buildPhases = (
+				FF465E69FA39DA9C359C4D6A /* [CP] Check Pods Manifest.lock */,
+				01094EA92614E274009724EB /* Sources */,
+				01094EAA2614E274009724EB /* Frameworks */,
+				01094EAB2614E274009724EB /* Resources */,
+				692D360F080614AEEF705731 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ImageClassifierStep1;
+			productName = ImageClassifierStep1;
+			productReference = 01094EAD2614E274009724EB /* ImageClassifierStep1.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		01094EA52614E274009724EB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					01094EAC2614E274009724EB = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = 01094EA82614E274009724EB /* Build configuration list for PBXProject "ImageClassifierStep1" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 01094EA42614E274009724EB;
+			productRefGroup = 01094EAE2614E274009724EB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				01094EAC2614E274009724EB /* ImageClassifierStep1 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		01094EAB2614E274009724EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01094EBD2614E275009724EB /* LaunchScreen.storyboard in Resources */,
+				01094EBA2614E275009724EB /* Assets.xcassets in Resources */,
+				0123B17B2614F00800F77B14 /* flower1.jpg in Resources */,
+				01094EB82614E274009724EB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		692D360F080614AEEF705731 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ImageClassifierStep1/Pods-ImageClassifierStep1-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ImageClassifierStep1/Pods-ImageClassifierStep1-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ImageClassifierStep1/Pods-ImageClassifierStep1-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF465E69FA39DA9C359C4D6A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ImageClassifierStep1-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		01094EA92614E274009724EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01094EB52614E274009724EB /* ViewController.swift in Sources */,
+				01094EB12614E274009724EB /* AppDelegate.swift in Sources */,
+				01094EB32614E274009724EB /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		01094EB62614E274009724EB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01094EB72614E274009724EB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		01094EBB2614E275009724EB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01094EBC2614E275009724EB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		01094EBF2614E275009724EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		01094EC02614E275009724EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		01094EC22614E275009724EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A846D6FDBFFAEFA59E7BCAB5 /* Pods-ImageClassifierStep1.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7S49927EHH;
+				INFOPLIST_FILE = ImageClassifierStep1/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.google.devrel.ImageClassifierStep1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		01094EC32614E275009724EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5FDF199C19C3DA04BA449DB /* Pods-ImageClassifierStep1.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7S49927EHH;
+				INFOPLIST_FILE = ImageClassifierStep1/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.google.devrel.ImageClassifierStep1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		01094EA82614E274009724EB /* Build configuration list for PBXProject "ImageClassifierStep1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01094EBF2614E275009724EB /* Debug */,
+				01094EC02614E275009724EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		01094EC12614E275009724EB /* Build configuration list for PBXNativeTarget "ImageClassifierStep1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01094EC22614E275009724EB /* Debug */,
+				01094EC32614E275009724EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 01094EA52614E274009724EB /* Project object */;
+}
