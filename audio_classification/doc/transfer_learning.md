@@ -17,11 +17,11 @@ So, if there’s an existing model that learned them, we can take advantage of t
 
 This shows what the architecture for YAMNet might look like. It’s comprised of a number of convolutional layers, followed by dense layers which perform the classification to 521 outputs.
 
-![YAMNet Architecture](//audio_classification/doc/transfer_learning_fig_1.png)
+![YAMNet Architecture](/audio_classification/doc/transfer_learning_fig_1.png)
 
 With transfer learning, we could take the pre-learned layers from YAMNet, freeze them so that they aren’t trainable, and then add our desired classification head, with only 5 output neurons in it, like this:
 
-![YAMNet Architecture](//audio_classification/doc/transfer_learning_fig_2.png)
+![YAMNet Architecture](/audio_classification/doc/transfer_learning_fig_2.png)
 
 When we consider that, as they have already been trained, all these layers are just sets of numbers indicating filter values, weights, and biases, along with a known architecture (number of filters per layer, size of filter, etc.), the idea of reusing them is pretty straightforward.
 
