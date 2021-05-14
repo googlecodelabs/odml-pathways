@@ -41,11 +41,7 @@ repositories {
 
 dependencies {
 
-//    compile(name:'tflite-support', ext:'aar')
-    compile(name:'task-library-audio', ext:'aar')
-    compile(name:'libbase-task-api', ext:'jar')
-    compile(name:'libtensorflowlite_support_java', ext:'jar')
-    implementation "org.tensorflow:tensorflow-lite:2.4.0"
+    implementation 'org.tensorflow:tensorflow-lite-task-audio:0.2.0-rc2'
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.3.2'

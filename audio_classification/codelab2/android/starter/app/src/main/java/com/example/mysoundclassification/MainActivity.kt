@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
     var TAG = "MainActivity"
 
     // TODO 1: define your model name
-    //var modelPath = "birds_model.tflite"
+    //var modelPath = "my_birds_model.tflite"
 
     var probabilityThreshold: Float = 0.3f
 
