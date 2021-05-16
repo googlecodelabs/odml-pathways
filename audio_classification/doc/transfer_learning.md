@@ -29,7 +29,7 @@ When we consider that, as they have already been trained, all these layers are j
 
 Just like images have resolution and color depth, audio will also have some specific characteristics, like sample rate, number of channels, and bit depth, that can impact the quality of your model.
 
-When you customize a model, the base model has a predetermined input specification. For YAMNet for example, the audio should be mono with a 16 kHz sample rate. This means that if you have audio files recorded with a higher sampling rate, you will need to downsample them. 
+When you customize a model, the base model has a predetermined input specification. Taking YAMNet as an example, the audio should be mono channel with a 16 kHz sample rate. This means that if you have audio files recorded with a higher sampling rate, you will need to downsample them. 
 
 Unfortunately not all audio can be downsampled because, depending on the original frequency of what was recorded, downsampling could hide the original audio frequency in an unrecoverable way. You can learn all the physics reasons for it here: [Nyquist–Shannon sampling theorem](https://en.wikipedia.org/wiki/Nyquist%E2%80%93Shannon_sampling_theorem). 
 
@@ -37,7 +37,7 @@ One example of this is some birds sing at a very high frequency (e.g.: the [Bana
 
 ## Capturing your own data
 
-Usually any audio recording can be converted to a format that is used with Machine Learning, but if you can record in the wav format that will make your life easier later.
+Usually any audio recording can be converted to a format that is used with Machine Learning, but if you can record in the WAV format that will make your life easier later.
 
 The audio recorder configuration should be set to what your base model expects. In the YAMNet case, a mono channel with 16 kHz sample rate and 16 bitrate depth.
 
@@ -49,10 +49,10 @@ One technique that  you can use is to have an extra class on your dataset that i
 
 When training Machine Learning models, you will usually need to split your dataset into, at least, a training and a test set ([why?](https://developers.google.com/machine-learning/crash-course/training-and-test-sets/splitting-data)). With the audio domain, you will have multiple recordings and you can cut from a long audio into multiple short ones. That makes data augmentation easier.
 
-An important thing to remember is that if you cut one audio in multiple files, and you place one of these files in one specific split,, all the others must also be on the same split. Otherwise you'd be leaking data and that would make the results of your model less accurate and reliable.
+An important thing to remember is that if you cut one audio in multiple files, and you place one of these files in one specific split, all the others must also be on the same split. Otherwise you'd be leaking data and that would make the results of your model less reliable.
 
 ## Next steps
 
 Now that you have a better understanding of how to do transfer learning for the audio domain, you can try with real data and deploy on a mobile app.
 
-The following codelab in this pathway will guide you through the whole process, using a bird song dataset.
+The following codelab in this pathway:[Build a custom pre-trained Audio Classification model](https://codelabs.developers.google.com/codelabs/tflite-audio-classification-custom-model-android), will guide you through the whole process using a bird song dataset.
