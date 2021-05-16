@@ -41,6 +41,7 @@ repositories {
 
 dependencies {
 
+    // TODO 1: add the Android Dependencies
     implementation 'org.tensorflow:tensorflow-lite-task-audio:0.2.0-rc2'
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
