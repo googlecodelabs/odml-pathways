@@ -49,7 +49,7 @@ dependencies {
     // Volley Network call
     implementation 'com.android.volley:volley:1.2.0'
     // ML Kit
-    implementation 'com.google.mlkit:object-detection:16.2.3'
+    implementation 'com.google.mlkit:object-detection:16.2.4'
     // Gson
     implementation 'com.google.code.gson:gson:2.8.6'
     // Glide

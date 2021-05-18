@@ -204,22 +204,4 @@ class ObjectDetectorActivity : AppCompatActivity() {
         // Make a copy of the bitmap in a desirable format
         return bitmap?.copy(Bitmap.Config.ARGB_8888, false)
     }
-
-    /**
-     * Function to log information about object detected by ML Kit.
-     */
-    private fun debugPrint(detectedObjects: List<DetectedObject>) {
-        detectedObjects.forEachIndexed { index, detectedObject ->
-            val box = detectedObject.boundingBox
-
-            Log.d(TAG, "Detected object: $index")
-            Log.d(TAG, " trackingId: ${detectedObject.trackingId}")
-            Log.d(TAG, " boundingBox: (${box.left}, ${box.top}) - (${box.right},${box.bottom})")
-            detectedObject.labels.forEach {
-                Log.d(TAG, " categories: ${it.text}")
-                Log.d(TAG, " confidence: ${it.confidence}")
-            }
-        }
-    }
-
 }
